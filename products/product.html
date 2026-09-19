@@ -12,7 +12,10 @@
 
     <title>Product | Padora Thrift Co.</title>
 
-    <link rel="stylesheet" href="../style.css">
+    <link
+        rel="stylesheet"
+        href="../style.css"
+    >
 
 </head>
 
@@ -20,603 +23,577 @@
 <body>
 
 
-    <!-- HEADER -->
+<!-- =========================
+     HEADER
+========================= -->
 
-    <header>
+<header class="site-header">
 
-        <div class="logo">
+    <div class="container nav-container">
+
+
+        <a
+            href="../index.html"
+            class="logo-link"
+        >
 
             <img
                 src="../images/logo.png.png"
                 alt="Padora Thrift Co. Logo"
             >
 
-            <div class="brand-name">
-
-                <span>Padora</span>
-
-                <span>Thrift Co.</span>
-
-            </div>
-
-        </div>
+        </a>
 
 
-        <nav>
+        <nav class="main-nav">
 
             <a href="../index.html">
                 Home
             </a>
 
-            <a href="../index.html#shop">
-                Shop
+            <a href="shop.html?category=women">
+                Women
             </a>
 
-            <a href="../index.html#about">
-                About
+            <a href="shop.html?category=men">
+                Men
             </a>
 
-            <a href="../index.html#contact">
-                Contact
+            <a href="shop.html?category=sneakers">
+                Sneakers
+            </a>
+
+            <a href="shop.html?category=flats">
+                Flats
+            </a>
+
+            <a href="shop.html?category=heels">
+                Heels
+            </a>
+
+            <a href="shop.html?category=boots">
+                Boots
             </a>
 
         </nav>
 
-    </header>
+
+        <a
+            href="../index.html#contact"
+            class="nav-button"
+        >
+            Contact
+        </a>
+
+
+    </div>
+
+</header>
 
 
 
-    <!-- PRODUCT -->
+<!-- =========================
+     PRODUCT
+========================= -->
 
-    <main>
-
-        <section class="product-detail">
+<main>
 
 
-            <!-- PRODUCT GALLERY -->
+<section class="product-detail-section">
 
-            <div class="product-gallery">
+    <div class="container product-detail-grid">
 
-                <div class="main-product-image">
 
-                    <img
-                        id="mainProductImage"
-                        src="../images/Heels.jpeg"
-                        alt="Product"
-                    >
+        <!-- PRODUCT IMAGE -->
+
+        <div class="product-detail-image">
+
+            <img
+                id="productImage"
+                src=""
+                alt=""
+            >
+
+
+            <div
+                id="soldOverlay"
+                class="sold-overlay"
+            >
+                SOLD OUT
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT INFORMATION -->
+
+        <div class="product-detail-info">
+
+
+            <p
+                id="productId"
+                class="product-id"
+            ></p>
+
+
+            <h1
+                id="productName"
+            ></h1>
+
+
+            <p
+                id="productPrice"
+                class="detail-price"
+            ></p>
+
+
+
+            <!-- PRODUCT DETAILS -->
+
+            <div class="product-info-list">
+
+
+                <div>
+
+                    <span>
+                        Condition
+                    </span>
+
+                    <strong
+                        id="productCondition"
+                    ></strong>
 
                 </div>
 
 
-                <div class="thumbnail-images">
+                <div>
 
+                    <span>
+                        Size
+                    </span>
 
-                    <button
-                        onclick="changeImage(document.getElementById('thumbnail1').src)"
-                    >
-
-                        <img
-                            id="thumbnail1"
-                            src="../images/Heels.jpeg"
-                            alt="Product view 1"
-                        >
-
-                    </button>
-
-
-                    <button
-                        onclick="changeImage(document.getElementById('thumbnail2').src)"
-                    >
-
-                        <img
-                            id="thumbnail2"
-                            src="../images/Heels.jpeg"
-                            alt="Product view 2"
-                        >
-
-                    </button>
-
+                    <strong
+                        id="productSize"
+                    ></strong>
 
                 </div>
+
+
+                <div>
+
+                    <span>
+                        Brand
+                    </span>
+
+                    <strong
+                        id="productBrand"
+                    ></strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Availability
+                    </span>
+
+                    <strong
+                        id="productAvailability"
+                    ></strong>
+
+                </div>
+
 
             </div>
 
 
 
-            <!-- PRODUCT INFORMATION -->
+            <!-- DESCRIPTION -->
 
-            <div class="product-detail-info">
-
-
-                <p class="small-text">
-                    PRE-LOVED FOOTWEAR
-                </p>
-
-
-                <h1 id="productName">
-                    Classic Heels
-                </h1>
-
-
-                <p
-                    class="product-id"
-                    id="productId"
-                >
-                    Product ID: PT-001
-                </p>
-
-
-                <h2
-                    class="detail-price"
-                    id="productPrice"
-                >
-                    PKR 3,000
-                </h2>
+            <p
+                id="productDescription"
+                class="product-description"
+            ></p>
 
 
 
-                <!-- PRODUCT INFO -->
+            <!-- ORDER BUTTON -->
 
-                <div class="product-info-box">
-
-
-                    <p>
-
-                        <strong>
-                            Condition:
-                        </strong>
-
-                        <span id="productCondition">
-                            Excellent Condition
-                        </span>
-
-                    </p>
-
-
-                    <p>
-
-                        <strong>
-                            Size:
-                        </strong>
-
-                        <span id="productSize">
-                            Available Soon
-                        </span>
-
-                    </p>
-
-
-                    <p>
-
-                        <strong>
-                            Brand:
-                        </strong>
-
-                        <span id="productBrand">
-                            Available Soon
-                        </span>
-
-                    </p>
-
-
-                    <p>
-
-                        <strong>
-                            Availability:
-                        </strong>
-
-                        <span id="productAvailability">
-                            In Stock
-                        </span>
-
-                    </p>
-
-
-                </div>
-
-
-
-                <!-- DESCRIPTION -->
-
-                <div class="description">
-
-                    <h3>
-                        Description
-                    </h3>
-
-
-                    <p id="productDescription">
-
-                        A carefully selected pre-loved
-                        footwear piece, checked for quality
-                        and ready for its next story.
-
-                    </p>
-
-                </div>
-
-
-
-                <!-- WHATSAPP ORDER BUTTON -->
+            <div id="orderArea">
 
                 <button
-                    class="order-button"
                     onclick="orderProduct()"
+                    class="whatsapp-button"
                 >
-
                     Order on WhatsApp
-
                 </button>
 
+            </div>
 
 
-                <!-- BACK BUTTON -->
+
+            <!-- BACK -->
+
+            <a
+                id="backToCollection"
+                href="../index.html"
+                class="back-link"
+            >
+                ← Back to Collection
+            </a>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="site-footer">
+
+    <div class="container footer-content">
+
+
+        <div>
+
+            <h3>
+                Padora Thrift Co.
+            </h3>
+
+
+            <p>
+                Pre-Loved Footwear • New Stories
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <p>
+                © 2026 Padora Thrift Co.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================
+     PRODUCT DATA
+========================= -->
+
+<script src="../products.js"></script>
+
+
+
+<!-- =========================
+     PRODUCT LOGIC
+========================= -->
+
+<script>
+
+
+const params =
+    new URLSearchParams(
+        window.location.search
+    );
+
+
+const productId =
+    params.get("id");
+
+
+const product =
+    products.find(
+        item => item.id === productId
+    );
+
+
+
+/* =========================
+   PRODUCT NOT FOUND
+========================= */
+
+
+if (!product) {
+
+
+    document.querySelector("main").innerHTML = `
+
+        <section class="product-detail-section">
+
+            <div class="container empty-product">
+
+                <h1>
+                    Product Not Found
+                </h1>
+
+                <p>
+                    This product could not be found.
+                </p>
 
                 <a
-                    href="../index.html#shop"
-                    class="back-button"
+                    href="../index.html"
+                    class="primary-button"
                 >
-
-                    ← Back to Collection
-
+                    Back to Home
                 </a>
-
 
             </div>
 
         </section>
 
-    </main>
+    `;
 
 
+} else {
 
-    <!-- FOOTER -->
 
-    <footer>
+    /* =========================
+       BASIC PRODUCT DETAILS
+    ========================= */
 
-        <p>
 
-            © 2026 Padora Thrift Co.
-            — Pre-Loved Footwear • New Stories
+    document.title =
+        `${product.name} | Padora Thrift Co.`;
 
-        </p>
 
-    </footer>
 
+    document.getElementById(
+        "productId"
+    ).textContent =
+        product.id;
 
 
-    <!-- JAVASCRIPT -->
 
-    <script>
+    document.getElementById(
+        "productName"
+    ).textContent =
+        product.name;
 
 
-        /* =========================
-           PRODUCT DATA
-        ========================= */
 
+    document.getElementById(
+        "productPrice"
+    ).textContent =
+        `PKR ${product.price.toLocaleString()}`;
 
-        const products = {
 
 
-            "PT-001": {
+    document.getElementById(
+        "productImage"
+    ).src =
+        `../${product.image}`;
 
-                name: "Classic Heels",
 
-                price: "PKR 3,000",
 
-                image: "../images/Heels.jpeg",
+    document.getElementById(
+        "productImage"
+    ).alt =
+        product.name;
 
-                condition: "Excellent Condition",
 
-                size: "Available Soon",
 
-                brand: "Available Soon",
+    /* =========================
+       PRODUCT INFORMATION
+    ========================= */
 
-                availability: "In Stock",
 
-                description:
-                    "A carefully selected pre-loved pair of heels, checked for quality and ready for its next story."
+    document.getElementById(
+        "productCondition"
+    ).textContent =
+        product.condition;
 
-            },
 
 
-            "PT-002": {
+    document.getElementById(
+        "productSize"
+    ).textContent =
+        product.size;
 
-                name: "Women's Footwear",
 
-                price: "PKR 2,500",
 
-                image: "../images/Women.jpeg",
+    document.getElementById(
+        "productBrand"
+    ).textContent =
+        product.brand;
 
-                condition: "Excellent Condition",
 
-                size: "Available Soon",
 
-                brand: "Available Soon",
+    document.getElementById(
+        "productAvailability"
+    ).textContent =
 
-                availability: "In Stock",
+        product.status === "sold"
 
-                description:
-                    "A stylish pre-loved footwear piece, carefully selected and checked for quality."
+        ? "SOLD OUT"
 
-            },
+        : product.availability;
 
 
-            "PT-003": {
 
-                name: "Men's Footwear",
+    document.getElementById(
+        "productDescription"
+    ).textContent =
+        product.description;
 
-                price: "PKR 3,500",
 
-                image: "../images/Men.jpeg",
 
-                condition: "Excellent Condition",
+    /* =========================
+       SOLD OUT SYSTEM
+    ========================= */
 
-                size: "Available Soon",
 
-                brand: "Available Soon",
+    const soldOverlay =
+        document.getElementById(
+            "soldOverlay"
+        );
 
-                availability: "In Stock",
 
-                description:
-                    "A quality pre-loved footwear piece selected for its style, condition and everyday wear."
+    const orderArea =
+        document.getElementById(
+            "orderArea"
+        );
 
-            },
 
 
-            "PT-004": {
+    if (
+        product.status === "sold"
+    ) {
 
-                name: "Classic Sneakers",
 
-                price: "PKR 2,500",
+        soldOverlay.style.display =
+            "flex";
 
-                image: "../images/Sneakers.jpeg",
 
-                condition: "Excellent Condition",
+        orderArea.innerHTML = `
 
-                size: "Available Soon",
+            <div class="sold-message">
 
-                brand: "Available Soon",
+                <strong>
+                    SOLD OUT
+                </strong>
 
-                availability: "In Stock",
+                <p>
+                    This one-of-a-kind pair has found its new story.
+                </p>
 
-                description:
-                    "A clean and stylish pre-loved sneaker pair, checked and prepared for its next story."
+            </div>
 
-            },
+        `;
 
 
-            "PT-005": {
+    } else {
 
-                name: "Elegant Flats",
 
-                price: "PKR 2,000",
+        soldOverlay.style.display =
+            "none";
 
-                image: "../images/Flats.jpeg",
+    }
 
-                condition: "Available Soon",
 
-                size: "Available Soon",
 
-                brand: "Available Soon",
+    /* =========================
+       BACK TO CATEGORY
+    ========================= */
 
-                availability: "In Stock",
 
-                description:
-                    "A comfortable pre-loved footwear piece, carefully selected and checked for quality."
+    const backLink =
+        document.getElementById(
+            "backToCollection"
+        );
 
-            },
 
+    backLink.href =
+        `shop.html?category=${product.category}`;
 
-            "PT-006": {
+}
 
-                name: "Classic Boots",
 
-                price: "PKR 4,000",
 
-                image: "../images/Boot.jpeg",
+/* =========================
+   WHATSAPP ORDER
+========================= */
 
-                condition: "Good Condition",
 
-                size: "Available Soon",
+function orderProduct() {
 
-                brand: "Available Soon",
 
-                availability: "In Stock",
+    if (!product) {
+        return;
+    }
 
-                description:
-                    "A classic pre-loved boot pair, carefully checked and ready for its next story."
 
-            }
+    if (
+        product.status === "sold"
+    ) {
+        return;
+    }
 
-        };
 
 
+    const phoneNumber =
+        "923002256465";
 
-        /* =========================
-           GET PRODUCT ID
-        ========================= */
 
 
-        const urlParams =
-            new URLSearchParams(
-                window.location.search
-            );
+    const message =
 
+        "Hi Padora Thrift Co.!%0A%0A" +
 
-        const productId =
-            urlParams.get("id") || "PT-001";
+        "I am interested in this product:%0A%0A" +
 
+        "Product: " +
+        product.name +
+        "%0A" +
 
-        const product =
-            products[productId];
+        "Product ID: " +
+        product.id +
+        "%0A" +
 
+        "Price: PKR " +
+        product.price.toLocaleString() +
+        "%0A%0A" +
 
+        "Is this product available?";
 
-        /* =========================
-           DISPLAY PRODUCT
-        ========================= */
 
 
-        if (product) {
+    const whatsappURL =
 
+        "https://wa.me/" +
+        phoneNumber +
+        "?text=" +
+        message;
 
-            document.title =
-                product.name +
-                " | Padora Thrift Co.";
 
 
-            document.getElementById(
-                "productName"
-            ).textContent =
-                product.name;
+    window.open(
+        whatsappURL,
+        "_blank"
+    );
 
+}
 
-            document.getElementById(
-                "productId"
-            ).textContent =
-                "Product ID: " +
-                productId;
 
-
-            document.getElementById(
-                "productPrice"
-            ).textContent =
-                product.price;
-
-
-            document.getElementById(
-                "productCondition"
-            ).textContent =
-                product.condition;
-
-
-            document.getElementById(
-                "productSize"
-            ).textContent =
-                product.size;
-
-
-            document.getElementById(
-                "productBrand"
-            ).textContent =
-                product.brand;
-
-
-            document.getElementById(
-                "productAvailability"
-            ).textContent =
-                product.availability;
-
-
-            document.getElementById(
-                "productDescription"
-            ).textContent =
-                product.description;
-
-
-            document.getElementById(
-                "mainProductImage"
-            ).src =
-                product.image;
-
-
-            document.getElementById(
-                "thumbnail1"
-            ).src =
-                product.image;
-
-
-            document.getElementById(
-                "thumbnail2"
-            ).src =
-                product.image;
-
-        }
-
-
-
-        /* =========================
-           CHANGE PRODUCT IMAGE
-        ========================= */
-
-
-        function changeImage(imagePath) {
-
-            document.getElementById(
-                "mainProductImage"
-            ).src =
-                imagePath;
-
-        }
-
-
-
-        /* =========================
-           WHATSAPP ORDER
-        ========================= */
-
-
-        function orderProduct() {
-
-
-            /*
-             * Padora Thrift Co.
-             * WhatsApp Number
-             */
-
-            const phoneNumber =
-                "923002256465";
-
-
-            /*
-             * Customer's message
-             */
-
-            const message =
-                "Hi Padora Thrift Co.!%0A%0A" +
-
-                "I am interested in this product:%0A%0A" +
-
-                "Product: " +
-                product.name +
-                "%0A" +
-
-                "Product ID: " +
-                productId +
-                "%0A" +
-
-                "Price: " +
-                product.price +
-                "%0A%0A" +
-
-                "Is this product available?";
-
-
-            /*
-             * WhatsApp URL
-             */
-
-            const whatsappURL =
-                "https://wa.me/" +
-                phoneNumber +
-                "?text=" +
-                message;
-
-
-            /*
-             * Open WhatsApp
-             */
-
-            window.open(
-                whatsappURL,
-                "_blank"
-            );
-
-        }
-
-
-    </script>
+</script>
 
 
 </body>
