@@ -3,13 +3,21 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 ```
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
 <title>Padora Thrift Co. | Collection</title>
 
-<link rel="stylesheet" href="../style.css">
+<link
+    rel="stylesheet"
+    href="../style.css"
+>
 ```
 
 </head>
@@ -21,28 +29,49 @@
 ```
 <div class="container nav-container">
 
-    <a href="../index.html" class="logo-link">
+
+    <a
+        href="../index.html"
+        class="logo-link"
+    >
+
         <img
             src="../images/logo.png.png"
             alt="Padora Thrift Co."
         >
+
     </a>
+
 
     <nav class="main-nav">
 
-        <a href="../index.html">Home</a>
+        <a href="../index.html">
+            Home
+        </a>
 
-        <a href="shop.html?category=women">Women</a>
+        <a href="shop.html?category=women">
+            Women
+        </a>
 
-        <a href="shop.html?category=men">Men</a>
+        <a href="shop.html?category=men">
+            Men
+        </a>
 
-        <a href="shop.html?category=sneakers">Sneakers</a>
+        <a href="shop.html?category=sneakers">
+            Sneakers
+        </a>
 
-        <a href="shop.html?category=flats">Flats</a>
+        <a href="shop.html?category=flats">
+            Flats
+        </a>
 
-        <a href="shop.html?category=heels">Heels</a>
+        <a href="shop.html?category=heels">
+            Heels
+        </a>
 
-        <a href="shop.html?category=boots">Boots</a>
+        <a href="shop.html?category=boots">
+            Boots
+        </a>
 
         <a
             href="../index.html#contact"
@@ -60,42 +89,45 @@
 
 <main>
 
-```
 <section class="collection-hero">
 
-    <div class="container">
+```
+<div class="container">
 
-        <span class="eyebrow">
-            Padora Thrift Co.
-        </span>
+    <span class="eyebrow">
+        Padora Thrift Co.
+    </span>
 
-        <h1 id="collection-title">
-            Collection
-        </h1>
 
-        <p id="collection-description">
-            Carefully selected pre-loved footwear,
-            each with its own story.
-        </p>
+    <h1 id="collection-title">
+        Collection
+    </h1>
 
-    </div>
+
+    <p id="collection-description">
+        Carefully selected pre-loved footwear,
+        each with its own story.
+    </p>
+
+</div>
+```
 
 </section>
-
 
 <section class="products-section">
 
-    <div class="container">
+```
+<div class="container">
 
-        <div
-            id="products-container"
-            class="product-grid"
-        ></div>
+    <div
+        id="products-container"
+        class="product-grid"
+    ></div>
 
-    </div>
+</div>
+```
 
 </section>
-```
 
 </main>
 
@@ -105,6 +137,7 @@
 <div class="container">
 
     <div class="footer-content">
+
 
         <div class="footer-brand">
 
@@ -117,6 +150,7 @@
             </p>
 
         </div>
+
 
         <div class="footer-links">
 
@@ -136,8 +170,11 @@
 
     </div>
 
+
     <div class="footer-bottom">
+
         © 2026 Padora Thrift Co. All rights reserved.
+
     </div>
 
 </div>
@@ -147,9 +184,16 @@
 
 <script>
 
+
+/* =========================
+   PRODUCT DATA
+========================= */
+
+
 const products = [
 
     {
+
         id: "PTC-001",
 
         category: "heels",
@@ -158,18 +202,33 @@ const products = [
 
         price: 1800,
 
-        image: "../images/PTC-001 IMAGE1.jpeg",
+        image:
+            "/padora-thrift-co/images/PTC-001%20IMAGE1.jpeg",
 
-        condition: "Excellent Condition",
+        condition:
+            "Excellent Condition",
 
-        size: "6M (9 inch)",
+        size:
+            "6M (9 inch)",
 
-        brand: "Steve Madden",
+        brand:
+            "Steve Madden",
 
-        status: "available"
+        status:
+            "available",
+
+        availability:
+            "Available"
+
     }
 
 ];
+
+
+
+/* =========================
+   URL CATEGORY
+========================= */
 
 
 const params =
@@ -180,6 +239,12 @@ const params =
 
 const category =
     params.get("category");
+
+
+
+/* =========================
+   PAGE ELEMENTS
+========================= */
 
 
 const title =
@@ -200,21 +265,39 @@ const container =
     );
 
 
+
+/* =========================
+   CATEGORY NAMES
+========================= */
+
+
 const categoryNames = {
 
-    women: "Women's Collection",
+    women:
+        "Women's Collection",
 
-    men: "Men's Collection",
+    men:
+        "Men's Collection",
 
-    sneakers: "Sneakers Collection",
+    sneakers:
+        "Sneakers Collection",
 
-    flats: "Flats Collection",
+    flats:
+        "Flats Collection",
 
-    heels: "Heels Collection",
+    heels:
+        "Heels Collection",
 
-    boots: "Boots Collection"
+    boots:
+        "Boots Collection"
 
 };
+
+
+
+/* =========================
+   CATEGORY DESCRIPTIONS
+========================= */
 
 
 const categoryDescriptions = {
@@ -240,10 +323,20 @@ const categoryDescriptions = {
 };
 
 
-if (category && categoryNames[category]) {
+
+/* =========================
+   CATEGORY HEADER
+========================= */
+
+
+if (
+    category &&
+    categoryNames[category]
+) {
 
     title.textContent =
         categoryNames[category];
+
 
     description.textContent =
         categoryDescriptions[category];
@@ -251,7 +344,15 @@ if (category && categoryNames[category]) {
 }
 
 
-const filteredProducts = category
+
+/* =========================
+   FILTER PRODUCTS
+========================= */
+
+
+const filteredProducts =
+
+    category
 
     ? products.filter(
         product =>
@@ -261,7 +362,15 @@ const filteredProducts = category
     : products;
 
 
-if (filteredProducts.length === 0) {
+
+/* =========================
+   NO PRODUCTS
+========================= */
+
+
+if (
+    filteredProducts.length === 0
+) {
 
     container.innerHTML = `
 
@@ -272,122 +381,168 @@ if (filteredProducts.length === 0) {
             </h3>
 
             <p>
-                We're carefully preparing new pieces for this collection.
+                We're carefully preparing new pieces
+                for this collection.
             </p>
 
         </div>
 
     `;
 
-} else {
+}
+
+
+
+/* =========================
+   SHOW PRODUCTS
+========================= */
+
+
+else {
 
     container.innerHTML =
 
-        filteredProducts.map(product => {
-
-            const isSold =
-                product.status === "sold";
+        filteredProducts
+            .map(product => {
 
 
-            return `
+                const isSold =
+                    product.status === "sold";
 
-                <article class="product-card">
 
-                    <div class="product-image-wrapper">
 
-                        <img
-                            src="${product.image}"
-                            alt="${product.name}"
-                            class="product-image"
+                return `
+
+                    <article
+                        class="product-card"
+                    >
+
+
+                        <div
+                            class="product-image-wrapper"
                         >
 
-                        ${
-                            isSold
 
-                            ? `
-
-                                <span class="sold-badge">
-                                    SOLD OUT
-                                </span>
-
-                            `
-
-                            : `
-
-                                <span class="available-badge">
-                                    AVAILABLE
-                                </span>
-
-                            `
-                        }
-
-                    </div>
+                            <img
+                                src="${product.image}"
+                                alt="${product.name}"
+                                class="product-image"
+                                loading="eager"
+                            >
 
 
-                    <div class="product-card-content">
+                            ${
+                                isSold
 
-                        <div class="product-id">
-                            ${product.id}
+                                ? `
+
+                                    <span
+                                        class="sold-badge"
+                                    >
+                                        SOLD OUT
+                                    </span>
+
+                                `
+
+                                : `
+
+                                    <span
+                                        class="available-badge"
+                                    >
+                                        AVAILABLE
+                                    </span>
+
+                                `
+                            }
+
+
                         </div>
 
 
-                        <h3>
-                            ${product.name}
-                        </h3>
+
+                        <div
+                            class="product-card-content"
+                        >
 
 
-                        <p>
-                            ${product.condition}
-                        </p>
+                            <div
+                                class="product-id"
+                            >
+                                ${product.id}
+                            </div>
 
 
-                        <p>
-                            Size: ${product.size}
-                        </p>
+
+                            <h3>
+                                ${product.name}
+                            </h3>
 
 
-                        <p>
-                            Brand: ${product.brand}
-                        </p>
+
+                            <p>
+                                ${product.condition}
+                            </p>
 
 
-                        <div class="product-price">
-                            PKR ${product.price.toLocaleString()}
+
+                            <p>
+                                Size: ${product.size}
+                            </p>
+
+
+
+                            <p>
+                                Brand: ${product.brand}
+                            </p>
+
+
+
+                            <div
+                                class="product-price"
+                            >
+                                PKR ${product.price.toLocaleString()}
+                            </div>
+
+
+
+                            ${
+                                isSold
+
+                                ? `
+
+                                    <div
+                                        class="sold-message"
+                                    >
+                                        SOLD OUT
+                                    </div>
+
+                                `
+
+                                : `
+
+                                    <a
+                                        href="product.html?id=${product.id}"
+                                        class="product-button"
+                                    >
+                                        View Product
+                                    </a>
+
+                                `
+                            }
+
+
                         </div>
 
 
-                        ${
-                            isSold
+                    </article>
 
-                            ? `
+                `;
 
-                                <div class="sold-message">
-                                    SOLD OUT
-                                </div>
-
-                            `
-
-                            : `
-
-                                <a
-                                    href="product.html?id=${product.id}"
-                                    class="product-button"
-                                >
-                                    View Product
-                                </a>
-
-                            `
-                        }
-
-                    </div>
-
-                </article>
-
-            `;
-
-        }).join("");
+            })
+            .join("");
 
 }
+
 
 </script>
 
