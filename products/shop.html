@@ -1,357 +1,393 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Padora Thrift Co. | Collection</title>
+```
+<title>Padora Thrift Co. | Collection</title>
 
-    <link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../style.css">
+```
+
 </head>
 
 <body>
 
 <header class="site-header">
 
-    <div class="container nav-container">
+```
+<div class="container nav-container">
 
-        <a href="../index.html" class="logo-link">
-            <img
-                src="../images/logo.png.png"
-                alt="Padora Thrift Co."
-            >
+    <a href="../index.html" class="logo-link">
+        <img
+            src="../images/logo.png.png"
+            alt="Padora Thrift Co."
+        >
+    </a>
+
+    <nav class="main-nav">
+
+        <a href="../index.html">Home</a>
+
+        <a href="shop.html?category=women">Women</a>
+
+        <a href="shop.html?category=men">Men</a>
+
+        <a href="shop.html?category=sneakers">Sneakers</a>
+
+        <a href="shop.html?category=flats">Flats</a>
+
+        <a href="shop.html?category=heels">Heels</a>
+
+        <a href="shop.html?category=boots">Boots</a>
+
+        <a
+            href="../index.html#contact"
+            class="nav-button"
+        >
+            Contact
         </a>
 
-        <nav class="main-nav">
+    </nav>
 
-            <a href="../index.html">Home</a>
-
-            <a href="shop.html?category=women">
-                Women
-            </a>
-
-            <a href="shop.html?category=men">
-                Men
-            </a>
-
-            <a href="shop.html?category=sneakers">
-                Sneakers
-            </a>
-
-            <a href="shop.html?category=flats">
-                Flats
-            </a>
-
-            <a href="shop.html?category=heels">
-                Heels
-            </a>
-
-            <a href="shop.html?category=boots">
-                Boots
-            </a>
-
-            <a
-                href="../index.html#contact"
-                class="nav-button"
-            >
-                Contact
-            </a>
-
-        </nav>
-
-    </div>
+</div>
+```
 
 </header>
 
-
 <main>
 
-    <section class="collection-hero">
+```
+<section class="collection-hero">
 
-        <div class="container">
+    <div class="container">
 
-            <span class="eyebrow">
+        <span class="eyebrow">
+            Padora Thrift Co.
+        </span>
+
+        <h1 id="collection-title">
+            Collection
+        </h1>
+
+        <p id="collection-description">
+            Carefully selected pre-loved footwear,
+            each with its own story.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="products-section">
+
+    <div class="container">
+
+        <div
+            id="products-container"
+            class="product-grid"
+        ></div>
+
+    </div>
+
+</section>
+```
+
+</main>
+
+<footer class="site-footer">
+
+```
+<div class="container">
+
+    <div class="footer-content">
+
+        <div class="footer-brand">
+
+            <h3>
                 Padora Thrift Co.
-            </span>
+            </h3>
 
-            <h1 id="collection-title">
-                Collection
-            </h1>
-
-            <p id="collection-description">
-                Carefully selected pre-loved footwear,
-                each with its own story.
+            <p>
+                Pre-Loved Footwear • New Stories
             </p>
 
         </div>
 
-    </section>
+        <div class="footer-links">
 
+            <a href="../index.html">
+                Home
+            </a>
 
-    <section class="products-section">
+            <a href="../index.html#about">
+                Our Story
+            </a>
 
-        <div class="container">
+            <a href="../index.html#contact">
+                Contact
+            </a>
 
-            <div
-                id="products-container"
-                class="product-grid"
-            ></div>
-
-        </div>
-
-    </section>
-
-</main>
-
-
-<footer class="site-footer">
-
-    <div class="container">
-
-        <div class="footer-content">
-
-            <div class="footer-brand">
-
-                <h3>
-                    Padora Thrift Co.
-                </h3>
-
-                <p>
-                    Pre-Loved Footwear • New Stories
-                </p>
-
-            </div>
-
-            <div class="footer-links">
-
-                <a href="../index.html">
-                    Home
-                </a>
-
-                <a href="../index.html#about">
-                    Our Story
-                </a>
-
-                <a href="../index.html#contact">
-                    Contact
-                </a>
-
-            </div>
-
-        </div>
-
-        <div class="footer-bottom">
-            © 2026 Padora Thrift Co. All rights reserved.
         </div>
 
     </div>
 
+    <div class="footer-bottom">
+        © 2026 Padora Thrift Co. All rights reserved.
+    </div>
+
+</div>
+```
+
 </footer>
 
+<script>
 
-<script type="module">
+const products = [
 
-    import { products } from "../products.js";
+    {
+        id: "PTC-001",
 
+        category: "heels",
 
-    const params =
-        new URLSearchParams(
-            window.location.search
-        );
+        name: "Green Strappy Heeled Mules",
 
-    const category =
-        params.get("category");
+        price: 1800,
 
+        image: "../images/PTC-001 IMAGE1.jpeg",
 
-    const title =
-        document.getElementById(
-            "collection-title"
-        );
+        condition: "Excellent Condition",
 
-    const description =
-        document.getElementById(
-            "collection-description"
-        );
+        size: "6M (9 inch)",
 
-    const container =
-        document.getElementById(
-            "products-container"
-        );
+        brand: "Steve Madden",
 
-
-    const categoryNames = {
-
-        women: "Women's Collection",
-
-        men: "Men's Collection",
-
-        sneakers: "Sneakers Collection",
-
-        flats: "Flats Collection",
-
-        heels: "Heels Collection",
-
-        boots: "Boots Collection"
-
-    };
-
-
-    const categoryDescriptions = {
-
-        women:
-            "Explore carefully selected pre-loved women's footwear.",
-
-        men:
-            "Explore carefully selected pre-loved men's footwear.",
-
-        sneakers:
-            "Comfortable and stylish pre-loved sneakers.",
-
-        flats:
-            "Elegant and comfortable pre-loved flats.",
-
-        heels:
-            "Statement heels selected for their style and condition.",
-
-        boots:
-            "Classic pre-loved boots ready for their next story."
-
-    };
-
-
-    if (category && categoryNames[category]) {
-
-        title.textContent =
-            categoryNames[category];
-
-        description.textContent =
-            categoryDescriptions[category];
-
+        status: "available"
     }
 
-
-    const filteredProducts = category
-        ? products.filter(
-            product =>
-                product.category === category
-        )
-        : products;
+];
 
 
-    if (filteredProducts.length === 0) {
-
-        container.innerHTML = `
-
-            <div class="no-products">
-
-                <h3>
-                    New Collection Coming Soon
-                </h3>
-
-                <p>
-                    We're carefully preparing new pieces for this collection.
-                </p>
-
-            </div>
-
-        `;
-
-    } else {
-
-        container.innerHTML =
-            filteredProducts.map(product => {
-
-                const isSold =
-                    product.status === "sold";
+const params =
+    new URLSearchParams(
+        window.location.search
+    );
 
 
-                return `
+const category =
+    params.get("category");
 
-                    <article class="product-card">
 
-                        <div class="product-image-wrapper">
+const title =
+    document.getElementById(
+        "collection-title"
+    );
 
-                            <img
-                                src="../${product.image}"
-                                alt="${product.name}"
-                                class="product-image"
-                            >
 
-                            ${
-                                isSold
+const description =
+    document.getElementById(
+        "collection-description"
+    );
 
-                                ? `
 
-                                    <span class="sold-badge">
-                                        SOLD OUT
-                                    </span>
+const container =
+    document.getElementById(
+        "products-container"
+    );
 
-                                `
 
-                                : `
+const categoryNames = {
 
-                                    <span class="available-badge">
-                                        AVAILABLE
-                                    </span>
+    women: "Women's Collection",
 
-                                `
-                            }
+    men: "Men's Collection",
 
+    sneakers: "Sneakers Collection",
+
+    flats: "Flats Collection",
+
+    heels: "Heels Collection",
+
+    boots: "Boots Collection"
+
+};
+
+
+const categoryDescriptions = {
+
+    women:
+        "Explore carefully selected pre-loved women's footwear.",
+
+    men:
+        "Explore carefully selected pre-loved men's footwear.",
+
+    sneakers:
+        "Comfortable and stylish pre-loved sneakers.",
+
+    flats:
+        "Elegant and comfortable pre-loved flats.",
+
+    heels:
+        "Statement heels selected for their style and condition.",
+
+    boots:
+        "Classic pre-loved boots ready for their next story."
+
+};
+
+
+if (category && categoryNames[category]) {
+
+    title.textContent =
+        categoryNames[category];
+
+    description.textContent =
+        categoryDescriptions[category];
+
+}
+
+
+const filteredProducts = category
+
+    ? products.filter(
+        product =>
+            product.category === category
+    )
+
+    : products;
+
+
+if (filteredProducts.length === 0) {
+
+    container.innerHTML = `
+
+        <div class="no-products">
+
+            <h3>
+                New Collection Coming Soon
+            </h3>
+
+            <p>
+                We're carefully preparing new pieces for this collection.
+            </p>
+
+        </div>
+
+    `;
+
+} else {
+
+    container.innerHTML =
+
+        filteredProducts.map(product => {
+
+            const isSold =
+                product.status === "sold";
+
+
+            return `
+
+                <article class="product-card">
+
+                    <div class="product-image-wrapper">
+
+                        <img
+                            src="${product.image}"
+                            alt="${product.name}"
+                            class="product-image"
+                        >
+
+                        ${
+                            isSold
+
+                            ? `
+
+                                <span class="sold-badge">
+                                    SOLD OUT
+                                </span>
+
+                            `
+
+                            : `
+
+                                <span class="available-badge">
+                                    AVAILABLE
+                                </span>
+
+                            `
+                        }
+
+                    </div>
+
+
+                    <div class="product-card-content">
+
+                        <div class="product-id">
+                            ${product.id}
                         </div>
 
 
-                        <div class="product-card-content">
-
-                            <div class="product-id">
-                                ${product.id}
-                            </div>
-
-                            <h3>
-                                ${product.name}
-                            </h3>
-
-                            <p>
-                                ${product.condition}
-                            </p>
-
-                            <div class="product-price">
-                                PKR ${product.price.toLocaleString()}
-                            </div>
+                        <h3>
+                            ${product.name}
+                        </h3>
 
 
-                            ${
-                                isSold
+                        <p>
+                            ${product.condition}
+                        </p>
 
-                                ? `
 
-                                    <div class="sold-message">
-                                        SOLD OUT
-                                    </div>
+                        <p>
+                            Size: ${product.size}
+                        </p>
 
-                                `
 
-                                : `
+                        <p>
+                            Brand: ${product.brand}
+                        </p>
 
-                                    <a
-                                        href="product.html?id=${product.id}"
-                                        class="product-button"
-                                    >
-                                        View Product
-                                    </a>
 
-                                `
-                            }
-
+                        <div class="product-price">
+                            PKR ${product.price.toLocaleString()}
                         </div>
 
-                    </article>
 
-                `;
+                        ${
+                            isSold
 
-            }).join("");
+                            ? `
 
-    }
+                                <div class="sold-message">
+                                    SOLD OUT
+                                </div>
+
+                            `
+
+                            : `
+
+                                <a
+                                    href="product.html?id=${product.id}"
+                                    class="product-button"
+                                >
+                                    View Product
+                                </a>
+
+                            `
+                        }
+
+                    </div>
+
+                </article>
+
+            `;
+
+        }).join("");
+
+}
 
 </script>
 
