@@ -1,555 +1,663 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
 
-    <meta charset="UTF-8">
+```
+<meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
 
-    <title>Product | Padora Thrift Co.</title>
+<title>Product | Padora Thrift Co.</title>
 
-    <link
-        rel="stylesheet"
-        href="../style.css"
-    >
+<link
+    rel="stylesheet"
+    href="../style.css"
+>
+
+<style>
+
+    .product-gallery {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .main-product-image {
+        width: 100%;
+        max-height: 600px;
+        object-fit: cover;
+        border-radius: 14px;
+        display: block;
+    }
+
+    .product-thumbnails {
+        display: flex;
+        gap: 12px;
+        overflow-x: auto;
+    }
+
+    .product-thumbnail {
+        width: 90px;
+        height: 90px;
+        object-fit: cover;
+        border-radius: 10px;
+        cursor: pointer;
+        border: 2px solid transparent;
+    }
+
+    .product-thumbnail.active {
+        border-color: #657153;
+    }
+
+    .order-form-area {
+        margin-top: 25px;
+        padding: 25px;
+        border-radius: 14px;
+        background: #f5f3ed;
+        display: none;
+    }
+
+    .order-form-area.show {
+        display: block;
+    }
+
+    .order-form-area h2 {
+        margin-bottom: 8px;
+    }
+
+    .order-form-area p {
+        margin-bottom: 20px;
+    }
+
+    .order-form {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .order-form label {
+        font-weight: 600;
+    }
+
+    .order-form input,
+    .order-form textarea,
+    .order-form select {
+        width: 100%;
+        padding: 13px;
+        border: 1px solid #d4d1c8;
+        border-radius: 8px;
+        font: inherit;
+        box-sizing: border-box;
+        background: #fff;
+    }
+
+    .order-form textarea {
+        min-height: 90px;
+        resize: vertical;
+    }
+
+    .place-order-button {
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        padding: 15px;
+        border-radius: 8px;
+        font: inherit;
+        font-weight: 600;
+    }
+
+    .order-summary {
+        padding: 15px;
+        margin-bottom: 18px;
+        background: #fff;
+        border-radius: 10px;
+    }
+
+    .sold-product-message {
+        padding: 18px;
+        border-radius: 10px;
+        background: #f1eee8;
+    }
+
+    @media (max-width: 768px) {
+
+        .product-thumbnails {
+            gap: 8px;
+        }
+
+        .product-thumbnail {
+            width: 72px;
+            height: 72px;
+        }
+
+    }
+
+</style>
+```
 
 </head>
 
-
 <body>
-
-
-<!-- =========================
-     HEADER
-========================= -->
 
 <header class="site-header">
 
-    <div class="container nav-container">
+```
+<div class="container nav-container">
 
+    <a
+        href="../index.html"
+        class="logo-link"
+    >
 
-        <a
-            href="../index.html"
-            class="logo-link"
+        <img
+            src="../images/logo.png.png"
+            alt="Padora Thrift Co. Logo"
         >
 
-            <img
-                src="../images/logo.png.png"
-                alt="Padora Thrift Co. Logo"
-            >
+    </a>
 
+
+    <nav class="main-nav">
+
+        <a href="../index.html">
+            Home
         </a>
 
-
-        <nav class="main-nav">
-
-            <a href="../index.html">
-                Home
-            </a>
-
-            <a href="shop.html?category=women">
-                Women
-            </a>
-
-            <a href="shop.html?category=men">
-                Men
-            </a>
-
-            <a href="shop.html?category=sneakers">
-                Sneakers
-            </a>
-
-            <a href="shop.html?category=flats">
-                Flats
-            </a>
-
-            <a href="shop.html?category=heels">
-                Heels
-            </a>
-
-            <a href="shop.html?category=boots">
-                Boots
-            </a>
-
-        </nav>
-
-
-        <a
-            href="../index.html#contact"
-            class="nav-button"
-        >
-            Contact
+        <a href="shop.html?category=women">
+            Women
         </a>
 
+        <a href="shop.html?category=men">
+            Men
+        </a>
 
-    </div>
+        <a href="shop.html?category=sneakers">
+            Sneakers
+        </a>
+
+        <a href="shop.html?category=flats">
+            Flats
+        </a>
+
+        <a href="shop.html?category=heels">
+            Heels
+        </a>
+
+        <a href="shop.html?category=boots">
+            Boots
+        </a>
+
+    </nav>
+
+
+    <a
+        href="../index.html#contact"
+        class="nav-button"
+    >
+        Contact
+    </a>
+
+</div>
+```
 
 </header>
 
-
-
-<!-- =========================
-     PRODUCT
-========================= -->
-
 <main>
-
 
 <section class="product-detail-section">
 
-    <div class="container product-detail-grid">
+```
+<div class="container product-detail-grid">
 
 
-        <!-- PRODUCT IMAGE -->
+    <!-- =========================
+         PRODUCT GALLERY
+    ========================== -->
 
-        <div class="product-detail-image">
+    <div class="product-gallery">
+
+        <img
+            id="mainProductImage"
+            class="main-product-image"
+            src="../images/PTC-001 IMAGE1.jpeg"
+            alt="Green Strappy Heeled Mules"
+        >
+
+
+        <div class="product-thumbnails">
 
             <img
-                id="productImage"
-                src=""
-                alt=""
+                src="../images/PTC-001 IMAGE1.jpeg"
+                alt="Green Strappy Heeled Mules - Image 1"
+                class="product-thumbnail active"
+                onclick="changeImage(this)"
             >
 
-
-            <div
-                id="soldOverlay"
-                class="sold-overlay"
+            <img
+                src="../images/PTC-001 IMAGE2.jpeg"
+                alt="Green Strappy Heeled Mules - Image 2"
+                class="product-thumbnail"
+                onclick="changeImage(this)"
             >
-                SOLD OUT
+
+            <img
+                src="../images/PTC-001 IMAGE3.jpeg"
+                alt="Green Strappy Heeled Mules - Image 3"
+                class="product-thumbnail"
+                onclick="changeImage(this)"
+            >
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         PRODUCT INFORMATION
+    ========================== -->
+
+    <div class="product-detail-info">
+
+
+        <p class="product-id">
+            PTC-001
+        </p>
+
+
+        <h1>
+            Green Strappy Heeled Mules
+        </h1>
+
+
+        <p class="detail-price">
+            PKR 1,800
+        </p>
+
+
+
+        <div class="product-info-list">
+
+
+            <div>
+
+                <span>
+                    Condition
+                </span>
+
+                <strong>
+                    Excellent Condition
+                </strong>
+
             </div>
+
+
+            <div>
+
+                <span>
+                    Size
+                </span>
+
+                <strong>
+                    6M (9 inch)
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    Brand
+                </span>
+
+                <strong>
+                    Steve Madden
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    Availability
+                </span>
+
+                <strong id="availability">
+                    Available
+                </strong>
+
+            </div>
+
 
         </div>
 
 
 
-        <!-- PRODUCT INFORMATION -->
+        <p class="product-description">
 
-        <div class="product-detail-info">
+            Elegant green strappy heeled mules featuring a
+            stylish woven strap design, square toe and sleek
+            high heel. Perfect for parties, dinners and dressy
+            looks. A statement piece that adds a chic touch
+            to any outfit.
 
-
-            <p
-                id="productId"
-                class="product-id"
-            ></p>
-
-
-            <h1
-                id="productName"
-            ></h1>
-
-
-            <p
-                id="productPrice"
-                class="detail-price"
-            ></p>
+        </p>
 
 
 
-            <!-- PRODUCT DETAILS -->
+        <p>
 
-            <div class="product-info-list">
+            Delivery charges are separate and will be
+            confirmed on WhatsApp.
 
-
-                <div>
-
-                    <span>
-                        Condition
-                    </span>
-
-                    <strong
-                        id="productCondition"
-                    ></strong>
-
-                </div>
+        </p>
 
 
-                <div>
 
-                    <span>
-                        Size
-                    </span>
+        <!-- =========================
+             ADD TO CART
+        ========================== -->
 
-                    <strong
-                        id="productSize"
-                    ></strong>
+        <div id="orderButtonArea">
 
-                </div>
+            <button
+                type="button"
+                class="whatsapp-button"
+                onclick="showOrderForm()"
+            >
+                Add to Cart / Order Now
+            </button>
 
-
-                <div>
-
-                    <span>
-                        Brand
-                    </span>
-
-                    <strong
-                        id="productBrand"
-                    ></strong>
-
-                </div>
+        </div>
 
 
-                <div>
 
-                    <span>
-                        Availability
-                    </span>
+        <!-- =========================
+             CUSTOMER ORDER FORM
+        ========================== -->
 
-                    <strong
-                        id="productAvailability"
-                    ></strong>
+        <div
+            id="orderFormArea"
+            class="order-form-area"
+        >
 
-                </div>
+            <h2>
+                Complete Your Order
+            </h2>
 
+
+            <p>
+                Please enter your details. Your order
+                will be sent to Padora Thrift Co. on WhatsApp.
+            </p>
+
+
+
+            <div class="order-summary">
+
+                <strong>
+                    Green Strappy Heeled Mules
+                </strong>
+
+                <br>
+
+                Product ID: PTC-001
+
+                <br>
+
+                Price: PKR 1,800
 
             </div>
 
 
 
-            <!-- DESCRIPTION -->
-
-            <p
-                id="productDescription"
-                class="product-description"
-            ></p>
+            <form
+                class="order-form"
+                onsubmit="placeOrder(event)"
+            >
 
 
+                <label for="customerName">
+                    Full Name
+                </label>
 
-            <!-- ORDER BUTTON -->
+                <input
+                    type="text"
+                    id="customerName"
+                    placeholder="Enter your full name"
+                    required
+                >
 
-            <div id="orderArea">
+
+
+                <label for="customerPhone">
+                    WhatsApp / Phone Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="customerPhone"
+                    placeholder="03XX XXXXXXX"
+                    required
+                >
+
+
+
+                <label for="customerAddress">
+                    Complete Delivery Address
+                </label>
+
+                <textarea
+                    id="customerAddress"
+                    placeholder="House number, street, area..."
+                    required
+                ></textarea>
+
+
+
+                <label for="customerCity">
+                    City
+                </label>
+
+                <input
+                    type="text"
+                    id="customerCity"
+                    placeholder="Enter your city"
+                    required
+                >
+
+
+
+                <label for="customerNotes">
+                    Additional Notes
+                </label>
+
+                <textarea
+                    id="customerNotes"
+                    placeholder="Optional"
+                ></textarea>
+
+
 
                 <button
-                    onclick="orderProduct()"
-                    class="whatsapp-button"
+                    type="submit"
+                    class="whatsapp-button place-order-button"
                 >
-                    Order on WhatsApp
+                    Place Order on WhatsApp
                 </button>
 
-            </div>
 
-
-
-            <!-- BACK -->
-
-            <a
-                id="backToCollection"
-                href="../index.html"
-                class="back-link"
-            >
-                ← Back to Collection
-            </a>
-
+            </form>
 
         </div>
+
+
+
+        <a
+            href="shop.html?category=heels"
+            class="back-link"
+        >
+            ← Back to Heels Collection
+        </a>
 
 
     </div>
+
+</div>
+```
 
 </section>
 
-
 </main>
-
-
-
-<!-- =========================
-     FOOTER
-========================= -->
 
 <footer class="site-footer">
 
-    <div class="container footer-content">
+```
+<div class="container footer-content">
 
+    <div>
 
-        <div>
+        <h3>
+            Padora Thrift Co.
+        </h3>
 
-            <h3>
-                Padora Thrift Co.
-            </h3>
-
-
-            <p>
-                Pre-Loved Footwear • New Stories
-            </p>
-
-        </div>
-
-
-        <div>
-
-            <p>
-                © 2026 Padora Thrift Co.
-            </p>
-
-        </div>
-
+        <p>
+            Pre-Loved Footwear • New Stories
+        </p>
 
     </div>
 
+
+    <div>
+
+        <p>
+            © 2026 Padora Thrift Co.
+        </p>
+
+    </div>
+
+</div>
+```
+
 </footer>
-
-
-
-<!-- =========================
-     PRODUCT DATA
-========================= -->
-
-<script src="../products.js"></script>
-
-
-
-<!-- =========================
-     PRODUCT LOGIC
-========================= -->
 
 <script>
 
 
-const params =
-    new URLSearchParams(
-        window.location.search
-    );
-
-
-const productId =
-    params.get("id");
-
-
-const product =
-    products.find(
-        item => item.id === productId
-    );
-
-
-
 /* =========================
-   PRODUCT NOT FOUND
+   CHANGE PRODUCT IMAGE
 ========================= */
 
+function changeImage(image) {
 
-if (!product) {
-
-
-    document.querySelector("main").innerHTML = `
-
-        <section class="product-detail-section">
-
-            <div class="container empty-product">
-
-                <h1>
-                    Product Not Found
-                </h1>
-
-                <p>
-                    This product could not be found.
-                </p>
-
-                <a
-                    href="../index.html"
-                    class="primary-button"
-                >
-                    Back to Home
-                </a>
-
-            </div>
-
-        </section>
-
-    `;
-
-
-} else {
-
-
-    /* =========================
-       BASIC PRODUCT DETAILS
-    ========================= */
-
-
-    document.title =
-        `${product.name} | Padora Thrift Co.`;
-
-
-
-    document.getElementById(
-        "productId"
-    ).textContent =
-        product.id;
-
-
-
-    document.getElementById(
-        "productName"
-    ).textContent =
-        product.name;
-
-
-
-    document.getElementById(
-        "productPrice"
-    ).textContent =
-        `PKR ${product.price.toLocaleString()}`;
-
-
-
-    document.getElementById(
-        "productImage"
-    ).src =
-        `../${product.image}`;
-
-
-
-    document.getElementById(
-        "productImage"
-    ).alt =
-        product.name;
-
-
-
-    /* =========================
-       PRODUCT INFORMATION
-    ========================= */
-
-
-    document.getElementById(
-        "productCondition"
-    ).textContent =
-        product.condition;
-
-
-
-    document.getElementById(
-        "productSize"
-    ).textContent =
-        product.size;
-
-
-
-    document.getElementById(
-        "productBrand"
-    ).textContent =
-        product.brand;
-
-
-
-    document.getElementById(
-        "productAvailability"
-    ).textContent =
-
-        product.status === "sold"
-
-        ? "SOLD OUT"
-
-        : product.availability;
-
-
-
-    document.getElementById(
-        "productDescription"
-    ).textContent =
-        product.description;
-
-
-
-    /* =========================
-       SOLD OUT SYSTEM
-    ========================= */
-
-
-    const soldOverlay =
+    const mainImage =
         document.getElementById(
-            "soldOverlay"
+            "mainProductImage"
+        );
+
+    mainImage.src =
+        image.src;
+
+
+    const thumbnails =
+        document.querySelectorAll(
+            ".product-thumbnail"
         );
 
 
-    const orderArea =
-        document.getElementById(
-            "orderArea"
-        );
+    thumbnails.forEach(
+        thumbnail => {
+
+            thumbnail.classList.remove(
+                "active"
+            );
+
+        }
+    );
 
 
-
-    if (
-        product.status === "sold"
-    ) {
-
-
-        soldOverlay.style.display =
-            "flex";
-
-
-        orderArea.innerHTML = `
-
-            <div class="sold-message">
-
-                <strong>
-                    SOLD OUT
-                </strong>
-
-                <p>
-                    This one-of-a-kind pair has found its new story.
-                </p>
-
-            </div>
-
-        `;
-
-
-    } else {
-
-
-        soldOverlay.style.display =
-            "none";
-
-    }
-
-
-
-    /* =========================
-       BACK TO CATEGORY
-    ========================= */
-
-
-    const backLink =
-        document.getElementById(
-            "backToCollection"
-        );
-
-
-    backLink.href =
-        `shop.html?category=${product.category}`;
+    image.classList.add(
+        "active"
+    );
 
 }
 
 
 
 /* =========================
-   WHATSAPP ORDER
+   SHOW ORDER FORM
 ========================= */
 
+function showOrderForm() {
 
-function orderProduct() {
-
-
-    if (!product) {
-        return;
-    }
-
-
-    if (
-        product.status === "sold"
-    ) {
-        return;
-    }
+    const form =
+        document.getElementById(
+            "orderFormArea"
+        );
 
 
+    form.classList.add(
+        "show"
+    );
 
-    const phoneNumber =
+
+    form.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+
+}
+
+
+
+/* =========================
+   PLACE ORDER
+========================= */
+
+function placeOrder(event) {
+
+    event.preventDefault();
+
+
+    const name =
+        document.getElementById(
+            "customerName"
+        ).value.trim();
+
+
+    const phone =
+        document.getElementById(
+            "customerPhone"
+        ).value.trim();
+
+
+    const address =
+        document.getElementById(
+            "customerAddress"
+        ).value.trim();
+
+
+    const city =
+        document.getElementById(
+            "customerCity"
+        ).value.trim();
+
+
+    const notes =
+        document.getElementById(
+            "customerNotes"
+        ).value.trim();
+
+
+
+    const whatsappNumber =
         "923002256465";
 
 
@@ -558,28 +666,52 @@ function orderProduct() {
 
         "Hi Padora Thrift Co.!%0A%0A" +
 
-        "I am interested in this product:%0A%0A" +
+        "I would like to place an order.%0A%0A" +
 
-        "Product: " +
-        product.name +
+        "PRODUCT DETAILS%0A" +
+
+        "Product: Green Strappy Heeled Mules%0A" +
+
+        "Product ID: PTC-001%0A" +
+
+        "Price: PKR 1,800%0A" +
+
+        "Size: 6M (9 inch)%0A" +
+
+        "Brand: Steve Madden%0A%0A" +
+
+        "CUSTOMER DETAILS%0A" +
+
+        "Name: " +
+        encodeURIComponent(name) +
         "%0A" +
 
-        "Product ID: " +
-        product.id +
+        "Phone: " +
+        encodeURIComponent(phone) +
         "%0A" +
 
-        "Price: PKR " +
-        product.price.toLocaleString() +
+        "Address: " +
+        encodeURIComponent(address) +
+        "%0A" +
+
+        "City: " +
+        encodeURIComponent(city) +
+        "%0A" +
+
+        "Additional Notes: " +
+        encodeURIComponent(
+            notes || "None"
+        ) +
         "%0A%0A" +
 
-        "Is this product available?";
+        "Please confirm availability and delivery charges.";
 
 
 
     const whatsappURL =
 
         "https://wa.me/" +
-        phoneNumber +
+        whatsappNumber +
         "?text=" +
         message;
 
@@ -594,7 +726,6 @@ function orderProduct() {
 
 
 </script>
-
 
 </body>
 
