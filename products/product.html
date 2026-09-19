@@ -1,337 +1,263 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
 
-```
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
->
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-<title>Product | Padora Thrift Co.</title>
+    <title>
+        Green Strappy Heeled Mules | Padora Thrift Co.
+    </title>
 
-<link
-    rel="stylesheet"
-    href="../style.css"
->
-
-<style>
-
-    .product-gallery {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .main-product-image {
-        width: 100%;
-        max-height: 600px;
-        object-fit: cover;
-        border-radius: 14px;
-        display: block;
-    }
-
-    .product-thumbnails {
-        display: flex;
-        gap: 12px;
-        overflow-x: auto;
-    }
-
-    .product-thumbnail {
-        width: 90px;
-        height: 90px;
-        object-fit: cover;
-        border-radius: 10px;
-        cursor: pointer;
-        border: 2px solid transparent;
-    }
-
-    .product-thumbnail.active {
-        border-color: #657153;
-    }
-
-    .order-form-area {
-        margin-top: 25px;
-        padding: 25px;
-        border-radius: 14px;
-        background: #f5f3ed;
-        display: none;
-    }
-
-    .order-form-area.show {
-        display: block;
-    }
-
-    .order-form-area h2 {
-        margin-bottom: 8px;
-    }
-
-    .order-form-area p {
-        margin-bottom: 20px;
-    }
-
-    .order-form {
-        display: flex;
-        flex-direction: column;
-        gap: 14px;
-    }
-
-    .order-form label {
-        font-weight: 600;
-    }
-
-    .order-form input,
-    .order-form textarea,
-    .order-form select {
-        width: 100%;
-        padding: 13px;
-        border: 1px solid #d4d1c8;
-        border-radius: 8px;
-        font: inherit;
-        box-sizing: border-box;
-        background: #fff;
-    }
-
-    .order-form textarea {
-        min-height: 90px;
-        resize: vertical;
-    }
-
-    .place-order-button {
-        border: none;
-        cursor: pointer;
-        width: 100%;
-        padding: 15px;
-        border-radius: 8px;
-        font: inherit;
-        font-weight: 600;
-    }
-
-    .order-summary {
-        padding: 15px;
-        margin-bottom: 18px;
-        background: #fff;
-        border-radius: 10px;
-    }
-
-    .sold-product-message {
-        padding: 18px;
-        border-radius: 10px;
-        background: #f1eee8;
-    }
-
-    @media (max-width: 768px) {
-
-        .product-thumbnails {
-            gap: 8px;
-        }
-
-        .product-thumbnail {
-            width: 72px;
-            height: 72px;
-        }
-
-    }
-
-</style>
-```
+    <link
+        rel="stylesheet"
+        href="../style.css"
+    >
 
 </head>
 
+
 <body>
+
 
 <header class="site-header">
 
-```
-<div class="container nav-container">
+    <div class="container nav-container">
 
-    <a
-        href="../index.html"
-        class="logo-link"
-    >
-
-        <img
-            src="../images/logo.png.png"
-            alt="Padora Thrift Co. Logo"
+        <a
+            href="../index.html"
+            class="logo-link"
         >
 
-    </a>
-
-
-    <nav class="main-nav">
-
-        <a href="../index.html">
-            Home
-        </a>
-
-        <a href="shop.html?category=women">
-            Women
-        </a>
-
-        <a href="shop.html?category=men">
-            Men
-        </a>
-
-        <a href="shop.html?category=sneakers">
-            Sneakers
-        </a>
-
-        <a href="shop.html?category=flats">
-            Flats
-        </a>
-
-        <a href="shop.html?category=heels">
-            Heels
-        </a>
-
-        <a href="shop.html?category=boots">
-            Boots
-        </a>
-
-    </nav>
-
-
-    <a
-        href="../index.html#contact"
-        class="nav-button"
-    >
-        Contact
-    </a>
-
-</div>
-```
-
-</header>
-
-<main>
-
-<section class="product-detail-section">
-
-```
-<div class="container product-detail-grid">
-
-
-    <!-- =========================
-         PRODUCT GALLERY
-    ========================== -->
-
-    <div class="product-gallery">
-
-        <img
-            id="mainProductImage"
-            class="main-product-image"
-            src="../images/PTC-001 IMAGE1.jpeg"
-            alt="Green Strappy Heeled Mules"
-        >
-
-
-        <div class="product-thumbnails">
-
             <img
-                src="../images/PTC-001 IMAGE1.jpeg"
-                alt="Green Strappy Heeled Mules - Image 1"
-                class="product-thumbnail active"
-                onclick="changeImage(this)"
+                src="../images/logo.png.png"
+                alt="Padora Thrift Co."
             >
 
-            <img
-                src="../images/PTC-001 IMAGE2.jpeg"
-                alt="Green Strappy Heeled Mules - Image 2"
-                class="product-thumbnail"
-                onclick="changeImage(this)"
-            >
+        </a>
 
-            <img
-                src="../images/PTC-001 IMAGE3.jpeg"
-                alt="Green Strappy Heeled Mules - Image 3"
-                class="product-thumbnail"
-                onclick="changeImage(this)"
-            >
 
-        </div>
+        <nav class="main-nav">
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="shop.html?category=women">
+                Women
+            </a>
+
+            <a href="shop.html?category=men">
+                Men
+            </a>
+
+            <a href="shop.html?category=sneakers">
+                Sneakers
+            </a>
+
+            <a href="shop.html?category=flats">
+                Flats
+            </a>
+
+            <a href="shop.html?category=heels">
+                Heels
+            </a>
+
+            <a href="shop.html?category=boots">
+                Boots
+            </a>
+
+        </nav>
 
     </div>
 
-
-
-    <!-- =========================
-         PRODUCT INFORMATION
-    ========================== -->
-
-    <div class="product-detail-info">
-
-
-        <p class="product-id">
-            PTC-001
-        </p>
-
-
-        <h1>
-            Green Strappy Heeled Mules
-        </h1>
-
-
-        <p class="detail-price">
-            PKR 1,800
-        </p>
+</header>
 
 
 
-        <div class="product-info-list">
+<main>
 
 
-            <div>
+<section class="product-detail-section">
 
-                <span>
-                    Condition
+    <div class="container">
+
+
+        <div class="product-detail">
+
+
+            <!-- =========================
+                 PRODUCT IMAGES
+            ========================== -->
+
+
+            <div class="product-gallery">
+
+
+                <div class="main-product-image">
+
+                    <img
+                        id="mainImage"
+                        src="../images/PTC-001%20IMAGE%201.jpeg"
+                        alt="Green Strappy Heeled Mules"
+                    >
+
+                </div>
+
+
+
+                <div class="product-thumbnails">
+
+
+                    <button
+                        type="button"
+                        onclick="changeImage('../images/PTC-001%20IMAGE%201.jpeg')"
+                    >
+
+                        <img
+                            src="../images/PTC-001%20IMAGE%201.jpeg"
+                            alt="Product Image 1"
+                        >
+
+                    </button>
+
+
+
+                    <button
+                        type="button"
+                        onclick="changeImage('../images/PTC-001%20IMAGE2.jpeg')"
+                    >
+
+                        <img
+                            src="../images/PTC-001%20IMAGE2.jpeg"
+                            alt="Product Image 2"
+                        >
+
+                    </button>
+
+
+
+                    <button
+                        type="button"
+                        onclick="changeImage('../images/PTC-001%20IMAGE3.jpeg')"
+                    >
+
+                        <img
+                            src="../images/PTC-001%20IMAGE3.jpeg"
+                            alt="Product Image 3"
+                        >
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =========================
+                 PRODUCT INFORMATION
+            ========================== -->
+
+
+            <div class="product-detail-content">
+
+
+                <span class="product-id">
+                    PTC-001
                 </span>
 
-                <strong>
+
+                <h1>
+                    Green Strappy Heeled Mules
+                </h1>
+
+
+                <div class="product-price">
+                    PKR 1,800
+                </div>
+
+
+                <p class="product-condition">
                     Excellent Condition
-                </strong>
-
-            </div>
+                </p>
 
 
-            <div>
-
-                <span>
-                    Size
-                </span>
-
-                <strong>
-                    6M (9 inch)
-                </strong>
-
-            </div>
+                <div class="product-info">
 
 
-            <div>
-
-                <span>
-                    Brand
-                </span>
-
-                <strong>
-                    Steve Madden
-                </strong>
-
-            </div>
+                    <p>
+                        <strong>Size:</strong>
+                        6M (9 inch)
+                    </p>
 
 
-            <div>
+                    <p>
+                        <strong>Brand:</strong>
+                        Steve Madden
+                    </p>
 
-                <span>
-                    Availability
-                </span>
 
-                <strong id="availability">
-                    Available
-                </strong>
+                    <p>
+                        <strong>Availability:</strong>
+                        Available
+                    </p>
+
+
+                </div>
+
+
+
+                <div class="product-description">
+
+                    <h3>
+                        Description
+                    </h3>
+
+                    <p>
+                        Elegant green strappy heeled mules
+                        featuring a stylish woven strap design,
+                        square toe and sleek high heel.
+                        Perfect for parties, dinners and dressy looks.
+                        A statement piece that adds a chic touch
+                        to any outfit.
+                    </p>
+
+                </div>
+
+
+
+                <div class="shipping-info">
+
+                    <p>
+                        Delivery charges are separate and
+                        will be confirmed on WhatsApp.
+                    </p>
+
+                </div>
+
+
+
+                <!-- =========================
+                     ORDER BUTTON
+                ========================== -->
+
+
+                <button
+                    type="button"
+                    class="product-button"
+                    onclick="showOrderForm()"
+                >
+                    Order Now
+                </button>
+
 
             </div>
 
@@ -339,54 +265,28 @@
         </div>
 
 
+    </div>
 
-        <p class="product-description">
-
-            Elegant green strappy heeled mules featuring a
-            stylish woven strap design, square toe and sleek
-            high heel. Perfect for parties, dinners and dressy
-            looks. A statement piece that adds a chic touch
-            to any outfit.
-
-        </p>
+</section>
 
 
 
-        <p>
-
-            Delivery charges are separate and will be
-            confirmed on WhatsApp.
-
-        </p>
+<!-- =========================
+     ORDER FORM
+========================== -->
 
 
+<section
+    id="order-section"
+    class="order-section"
+    style="display:none;"
+>
 
-        <!-- =========================
-             ADD TO CART
-        ========================== -->
-
-        <div id="orderButtonArea">
-
-            <button
-                type="button"
-                class="whatsapp-button"
-                onclick="showOrderForm()"
-            >
-                Add to Cart / Order Now
-            </button>
-
-        </div>
+    <div class="container">
 
 
+        <div class="order-form-wrapper">
 
-        <!-- =========================
-             CUSTOMER ORDER FORM
-        ========================== -->
-
-        <div
-            id="orderFormArea"
-            class="order-form-area"
-        >
 
             <h2>
                 Complete Your Order
@@ -394,101 +294,99 @@
 
 
             <p>
-                Please enter your details. Your order
-                will be sent to Padora Thrift Co. on WhatsApp.
+                Please provide your delivery details.
             </p>
 
 
 
-            <div class="order-summary">
-
-                <strong>
-                    Green Strappy Heeled Mules
-                </strong>
-
-                <br>
-
-                Product ID: PTC-001
-
-                <br>
-
-                Price: PKR 1,800
-
-            </div>
-
-
-
             <form
-                class="order-form"
                 onsubmit="placeOrder(event)"
             >
 
 
-                <label for="customerName">
-                    Full Name
-                </label>
+                <div class="form-group">
 
-                <input
-                    type="text"
-                    id="customerName"
-                    placeholder="Enter your full name"
-                    required
-                >
+                    <label>
+                        Full Name
+                    </label>
 
+                    <input
+                        type="text"
+                        id="customerName"
+                        required
+                    >
 
-
-                <label for="customerPhone">
-                    WhatsApp / Phone Number
-                </label>
-
-                <input
-                    type="tel"
-                    id="customerPhone"
-                    placeholder="03XX XXXXXXX"
-                    required
-                >
+                </div>
 
 
 
-                <label for="customerAddress">
-                    Complete Delivery Address
-                </label>
+                <div class="form-group">
 
-                <textarea
-                    id="customerAddress"
-                    placeholder="House number, street, area..."
-                    required
-                ></textarea>
+                    <label>
+                        WhatsApp / Phone
+                    </label>
 
+                    <input
+                        type="tel"
+                        id="customerPhone"
+                        required
+                    >
 
-
-                <label for="customerCity">
-                    City
-                </label>
-
-                <input
-                    type="text"
-                    id="customerCity"
-                    placeholder="Enter your city"
-                    required
-                >
+                </div>
 
 
 
-                <label for="customerNotes">
-                    Additional Notes
-                </label>
+                <div class="form-group">
 
-                <textarea
-                    id="customerNotes"
-                    placeholder="Optional"
-                ></textarea>
+                    <label>
+                        Complete Delivery Address
+                    </label>
+
+                    <textarea
+                        id="customerAddress"
+                        rows="4"
+                        required
+                    ></textarea>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label>
+                        City
+                    </label>
+
+                    <input
+                        type="text"
+                        id="customerCity"
+                        required
+                    >
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label>
+                        Additional Notes
+                    </label>
+
+                    <textarea
+                        id="customerNotes"
+                        rows="3"
+                        placeholder="Optional"
+                    ></textarea>
+
+                </div>
 
 
 
                 <button
                     type="submit"
-                    class="whatsapp-button place-order-button"
+                    class="product-button"
                 >
                     Place Order on WhatsApp
                 </button>
@@ -496,96 +394,84 @@
 
             </form>
 
+
         </div>
 
 
-
-        <a
-            href="shop.html?category=heels"
-            class="back-link"
-        >
-            ← Back to Heels Collection
-        </a>
-
-
     </div>
-
-</div>
-```
 
 </section>
 
+
 </main>
+
+
 
 <footer class="site-footer">
 
-```
-<div class="container footer-content">
+    <div class="container">
 
-    <div>
+        <div class="footer-content">
 
-        <h3>
-            Padora Thrift Co.
-        </h3>
 
-        <p>
-            Pre-Loved Footwear • New Stories
-        </p>
+            <div class="footer-brand">
+
+                <h3>
+                    Padora Thrift Co.
+                </h3>
+
+                <p>
+                    Pre-Loved Footwear • New Stories
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="../index.html">
+                    Home
+                </a>
+
+                <a href="../index.html#about">
+                    Our Story
+                </a>
+
+                <a href="../index.html#contact">
+                    Contact
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            © 2026 Padora Thrift Co. All rights reserved.
+
+        </div>
 
     </div>
-
-
-    <div>
-
-        <p>
-            © 2026 Padora Thrift Co.
-        </p>
-
-    </div>
-
-</div>
-```
 
 </footer>
+
+
 
 <script>
 
 
 /* =========================
-   CHANGE PRODUCT IMAGE
+   CHANGE MAIN IMAGE
 ========================= */
 
-function changeImage(image) {
 
-    const mainImage =
-        document.getElementById(
-            "mainProductImage"
-        );
+function changeImage(imagePath) {
 
-    mainImage.src =
-        image.src;
-
-
-    const thumbnails =
-        document.querySelectorAll(
-            ".product-thumbnail"
-        );
-
-
-    thumbnails.forEach(
-        thumbnail => {
-
-            thumbnail.classList.remove(
-                "active"
-            );
-
-        }
-    );
-
-
-    image.classList.add(
-        "active"
-    );
+    document.getElementById(
+        "mainImage"
+    ).src = imagePath;
 
 }
 
@@ -595,22 +481,21 @@ function changeImage(image) {
    SHOW ORDER FORM
 ========================= */
 
+
 function showOrderForm() {
 
-    const form =
+    const orderSection =
         document.getElementById(
-            "orderFormArea"
+            "order-section"
         );
 
 
-    form.classList.add(
-        "show"
-    );
+    orderSection.style.display =
+        "block";
 
 
-    form.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
+    orderSection.scrollIntoView({
+        behavior: "smooth"
     });
 
 }
@@ -621,6 +506,7 @@ function showOrderForm() {
    PLACE ORDER
 ========================= */
 
+
 function placeOrder(event) {
 
     event.preventDefault();
@@ -629,31 +515,65 @@ function placeOrder(event) {
     const name =
         document.getElementById(
             "customerName"
-        ).value.trim();
+        ).value;
 
 
     const phone =
         document.getElementById(
             "customerPhone"
-        ).value.trim();
+        ).value;
 
 
     const address =
         document.getElementById(
             "customerAddress"
-        ).value.trim();
+        ).value;
 
 
     const city =
         document.getElementById(
             "customerCity"
-        ).value.trim();
+        ).value;
 
 
     const notes =
         document.getElementById(
             "customerNotes"
-        ).value.trim();
+        ).value;
+
+
+
+    const message =
+
+`Hello Padora Thrift Co. 👋
+
+I would like to place an order.
+
+Product ID: PTC-001
+Product: Green Strappy Heeled Mules
+Price: PKR 1,800
+Size: 6M (9 inch)
+Brand: Steve Madden
+
+Customer Details:
+
+Name: ${name}
+
+WhatsApp / Phone:
+${phone}
+
+Delivery Address:
+${address}
+
+City:
+${city}
+
+Additional Notes:
+${notes || "None"}
+
+Please confirm my order and delivery charges.
+
+Thank you!`;
 
 
 
@@ -661,60 +581,11 @@ function placeOrder(event) {
         "923002256465";
 
 
-
-    const message =
-
-        "Hi Padora Thrift Co.!%0A%0A" +
-
-        "I would like to place an order.%0A%0A" +
-
-        "PRODUCT DETAILS%0A" +
-
-        "Product: Green Strappy Heeled Mules%0A" +
-
-        "Product ID: PTC-001%0A" +
-
-        "Price: PKR 1,800%0A" +
-
-        "Size: 6M (9 inch)%0A" +
-
-        "Brand: Steve Madden%0A%0A" +
-
-        "CUSTOMER DETAILS%0A" +
-
-        "Name: " +
-        encodeURIComponent(name) +
-        "%0A" +
-
-        "Phone: " +
-        encodeURIComponent(phone) +
-        "%0A" +
-
-        "Address: " +
-        encodeURIComponent(address) +
-        "%0A" +
-
-        "City: " +
-        encodeURIComponent(city) +
-        "%0A" +
-
-        "Additional Notes: " +
-        encodeURIComponent(
-            notes || "None"
-        ) +
-        "%0A%0A" +
-
-        "Please confirm availability and delivery charges.";
-
-
-
     const whatsappURL =
-
         "https://wa.me/" +
         whatsappNumber +
         "?text=" +
-        message;
-
+        encodeURIComponent(message);
 
 
     window.open(
@@ -726,6 +597,7 @@ function placeOrder(event) {
 
 
 </script>
+
 
 </body>
 
