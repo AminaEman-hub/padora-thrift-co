@@ -1,236 +1,492 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Shop | Padora Thrift Co.</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <link rel="stylesheet" href="../style.css">
+    <title>
+        Shop | Padora Thrift Co.
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../style.css"
+    >
+
 </head>
+
 
 <body>
 
-<header class="site-header">
-    <div class="container header-inner">
 
-        <a href="../index.html" class="logo-link">
-            <img src="../images/logo.png.png" alt="Padora Thrift Co.">
-        </a>
+    <!-- HEADER -->
 
-        <nav class="main-nav">
-            <a href="../index.html">Home</a>
-            <a href="shop.html">Shop</a>
-            <a href="../index.html#about">About</a>
-            <a href="../index.html#contact">Contact</a>
-        </nav>
+    <header class="site-header">
 
-    </div>
-</header>
+        <div class="container nav-container">
+
+            <a
+                href="../index.html"
+                class="logo-link"
+            >
+
+                <img
+                    src="../images/logo.png.png"
+                    alt="Padora Thrift Co. Logo"
+                >
+
+            </a>
 
 
-<main class="collection-page">
+            <nav class="main-nav">
+
+                <a href="../index.html">
+                    Home
+                </a>
+
+                <a href="shop.html">
+                    Shop
+                </a>
+
+                <a href="../index.html#about">
+                    About
+                </a>
+
+                <a href="../index.html#contact">
+                    Contact
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- COLLECTION HEADING -->
 
     <section class="collection-hero">
+
         <div class="container">
 
-            <h1 id="collectionTitle">All Collections</h1>
+            <h1 id="collectionTitle">
+                Shop Our Collection
+            </h1>
 
             <p id="collectionDescription">
-                Explore our carefully selected pre-loved footwear.
+                Carefully selected pre-loved footwear ready for a new story.
             </p>
 
         </div>
+
     </section>
 
 
-    <section class="collection-products">
+
+    <!-- PRODUCTS -->
+
+    <main class="collection-products">
 
         <div class="container">
 
-            <div class="product-grid">
-
-                <!-- =================================================
-                     PTC-001
-                ================================================== -->
-
-                <article class="product-card">
-
-                    <div class="product-card-image">
-                        <img
-                            src="../images/PTC-001%20IMAGE2.jpeg"
-                            alt="Green Strappy Heeled Mules"
-                        >
-                    </div>
-
-                    <div class="product-card-content">
-
-                        <p class="product-card-id">
-                            PTC-001
-                        </p>
-
-                        <h3>
-                            Green Strappy Heeled Mules
-                        </h3>
-
-                        <p class="product-card-price">
-                            PKR 1,800
-                        </p>
-
-                        <p class="product-card-availability">
-                            Available
-                        </p>
-
-                        <a
-                            href="product.html"
-                            class="primary-button"
-                        >
-                            VIEW PRODUCT
-                        </a>
-
-                    </div>
-
-                </article>
+            <div
+                class="product-grid"
+                id="productGrid"
+            ></div>
 
 
-                <!-- =================================================
-                     PTC-002
-                ================================================== -->
+            <p
+                class="no-products"
+                id="noProducts"
+                style="display:none;"
+            >
+                No products are available in this collection yet.
+            </p>
 
-                <article class="product-card">
+        </div>
 
-                    <div class="product-card-image">
-                        <img
-                            src="../images/PTC-002%20IMAGE2.jpeg"
-                            alt="Beige Patent Pointed-Toe Kitten Heels"
-                        >
-                    </div>
+    </main>
 
-                    <div class="product-card-content">
 
-                        <p class="product-card-id">
-                            PTC-002
-                        </p>
 
-                        <h3>
-                            Beige Patent Pointed-Toe Kitten Heels
-                        </h3>
+    <!-- FOOTER -->
 
-                        <p class="product-card-price">
-                            PKR 2,000
-                        </p>
+    <footer class="site-footer">
 
-                        <p class="product-card-availability">
-                            Available
-                        </p>
+        <div class="container footer-content">
 
-                        <a
-                            href="product-002.html"
-                            class="primary-button"
-                        >
-                            VIEW PRODUCT
-                        </a>
 
-                    </div>
+            <div class="footer-brand">
 
-                </article>
+                <img
+                    src="../images/logo.png.png"
+                    alt="Padora Thrift Co. Logo"
+                >
+
+                <p>
+                    Pre-Loved Footwear • New Stories
+                </p>
+
+            </div>
+
+
+
+            <div class="footer-links">
+
+                <h4>
+                    Explore
+                </h4>
+
+                <a href="../index.html">
+                    Home
+                </a>
+
+                <a href="shop.html">
+                    Shop
+                </a>
+
+                <a href="../index.html#about">
+                    About
+                </a>
+
+            </div>
+
+
+
+            <div class="footer-links">
+
+                <h4>
+                    Collections
+                </h4>
+
+                <a href="shop.html?category=women">
+                    Women
+                </a>
+
+                <a href="shop.html?category=men">
+                    Men
+                </a>
+
+                <a href="shop.html?category=sneakers">
+                    Sneakers
+                </a>
+
+                <a href="shop.html?category=flats">
+                    Flats
+                </a>
+
+                <a href="shop.html?category=heels">
+                    Heels
+                </a>
+
+                <a href="shop.html?category=boots">
+                    Boots
+                </a>
 
             </div>
 
         </div>
 
-    </section>
-
-</main>
 
 
-<footer class="site-footer">
+        <div class="footer-bottom">
 
-    <div class="container footer-content">
+            <div class="container">
 
-        <div class="footer-brand">
+                <p>
+                    © 2026 Padora Thrift Co. All rights reserved.
+                </p>
 
-            <img
-                src="../images/logo.png.png"
-                alt="Padora Thrift Co."
-            >
-
-            <p>
-                Pre-Loved Footwear • New Stories
-            </p>
+            </div>
 
         </div>
 
-
-        <div class="footer-links">
-
-            <h4>Quick Links</h4>
-
-            <a href="../index.html">
-                Home
-            </a>
-
-            <a href="shop.html">
-                Shop
-            </a>
-
-            <a href="../index.html#about">
-                About
-            </a>
-
-            <a href="../index.html#contact">
-                Contact
-            </a>
-
-        </div>
+    </footer>
 
 
-        <div class="footer-links">
 
-            <h4>Collections</h4>
-
-            <a href="shop.html?category=women">
-                Women
-            </a>
-
-            <a href="shop.html?category=men">
-                Men
-            </a>
-
-            <a href="shop.html?category=sneakers">
-                Sneakers
-            </a>
-
-            <a href="shop.html?category=flats">
-                Flats
-            </a>
-
-            <a href="shop.html?category=heels">
-                Heels
-            </a>
-
-            <a href="shop.html?category=boots">
-                Boots
-            </a>
-
-        </div>
-
-    </div>
+    <script>
 
 
-    <div class="footer-bottom">
+        /* =========================================
+           PRODUCTS
+        ========================================= */
 
-        <div class="container">
+        const products = [
 
-            <p>
-                © 2026 Padora Thrift Co. All rights reserved.
-            </p>
+            {
+                id: "PTC-001",
+                name: "Green Strappy Heeled Mules",
+                price: "PKR 1,800",
+                category: "heels",
+                image: "../images/PTC-001%20IMAGE2.jpeg",
+                link: "product.html",
+                availability: "Available"
+            },
 
-        </div>
 
-    </div>
+            {
+                id: "PTC-002",
+                name: "Beige Patent Pointed-Toe Kitten Heels",
+                price: "PKR 2,000",
+                category: "heels",
+                image: "../images/PTC-002%20IMAGE2.jpeg",
+                link: "product-002.html",
+                availability: "Available"
+            },
 
-</footer>
+
+            {
+                id: "PTC-003",
+                name: "Women's Strappy Patent Heels / Sandals",
+                price: "PKR 3,000",
+                category: "heels",
+                image: "../images/PTC-003%20IMAGE1.jfif",
+                link: "product-003.html",
+                availability: "Available"
+            }
+
+        ];
+
+
+
+        /* =========================================
+           CATEGORY HEADINGS
+        ========================================= */
+
+        const categoryNames = {
+
+            women: "Women’s Collection",
+
+            men: "Men’s Collection",
+
+            sneakers: "Sneakers Collection",
+
+            flats: "Flats Collection",
+
+            heels: "Heels Collection",
+
+            boots: "Boots Collection"
+
+        };
+
+
+
+        const categoryDescriptions = {
+
+            women:
+                "Explore our carefully selected pre-loved footwear for women.",
+
+            men:
+                "Explore our carefully selected pre-loved footwear for men.",
+
+            sneakers:
+                "Comfortable and stylish pre-loved sneakers.",
+
+            flats:
+                "Easy, elegant and versatile pre-loved flats.",
+
+            heels:
+                "Elegant pre-loved heels selected for your next occasion.",
+
+            boots:
+                "Statement pre-loved boots ready for a new story."
+
+        };
+
+
+
+        /* =========================================
+           GET CATEGORY FROM URL
+        ========================================= */
+
+        const params =
+            new URLSearchParams(
+                window.location.search
+            );
+
+
+        const category =
+            params.get("category");
+
+
+
+        const collectionTitle =
+            document.getElementById(
+                "collectionTitle"
+            );
+
+
+        const collectionDescription =
+            document.getElementById(
+                "collectionDescription"
+            );
+
+
+        const productGrid =
+            document.getElementById(
+                "productGrid"
+            );
+
+
+        const noProducts =
+            document.getElementById(
+                "noProducts"
+            );
+
+
+
+        /* =========================================
+           CHANGE HEADING
+        ========================================= */
+
+        if (
+            category &&
+            categoryNames[category]
+        ) {
+
+            collectionTitle.textContent =
+                categoryNames[category];
+
+
+            collectionDescription.textContent =
+                categoryDescriptions[category];
+
+        }
+
+
+
+        /* =========================================
+           FILTER PRODUCTS
+        ========================================= */
+
+        let visibleProducts =
+            products;
+
+
+        if (category) {
+
+            visibleProducts =
+                products.filter(
+                    product =>
+                        product.category === category
+                );
+
+        }
+
+
+
+        /* =========================================
+           DISPLAY PRODUCTS
+        ========================================= */
+
+        if (
+            visibleProducts.length === 0
+        ) {
+
+            productGrid.style.display =
+                "none";
+
+
+            noProducts.style.display =
+                "block";
+
+        }
+
+        else {
+
+            visibleProducts.forEach(
+                product => {
+
+                    const card =
+                        document.createElement(
+                            "article"
+                        );
+
+
+                    card.className =
+                        "product-card";
+
+
+                    card.innerHTML = `
+
+                        <div class="product-card-image">
+
+                            <a href="${product.link}">
+
+                                <img
+                                    src="${product.image}"
+                                    alt="${product.name}"
+                                >
+
+                            </a>
+
+                        </div>
+
+
+                        <div class="product-card-content">
+
+                            <p class="product-card-id">
+
+                                ${product.id}
+
+                            </p>
+
+
+                            <h3>
+
+                                ${product.name}
+
+                            </h3>
+
+
+                            <p class="product-card-price">
+
+                                ${product.price}
+
+                            </p>
+
+
+                            <p class="product-card-availability">
+
+                                ${product.availability}
+
+                            </p>
+
+
+                            <a
+                                href="${product.link}"
+                                class="primary-button"
+                            >
+
+                                View Product
+
+                            </a>
+
+                        </div>
+
+                    `;
+
+
+                    productGrid.appendChild(
+                        card
+                    );
+
+                }
+            );
+
+        }
+
+    </script>
+
 
 </body>
+
 </html>
